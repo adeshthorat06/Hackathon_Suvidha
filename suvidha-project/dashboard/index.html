@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SUVIDHA | Citizen Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <span>Government of India | भारत सरकार</span>
+  <span>हिंदी</span>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="logo">
+    <div class="logo-circle">S</div>
+    <div>
+      <h2>SUVIDHA</h2>
+      <p>Smart Urban Digital Helpdesk</p>
+    </div>
+  </div>
+
+  <div class="nav-right">
+    <span class="home">🏠 Home</span>
+    <span class="user">👤 hshsb3137</span>
+  </div>
+</header>
+
+<!-- DASHBOARD -->
+<section class="dashboard">
+  <div class="dash-header">
+    <div>
+      <h1>Citizen Dashboard</h1>
+      <p>Welcome back! hshsb3137 | 9172162675</p>
+    </div>
+    <div class="notify">🔔<span>3</span></div>
+  </div>
+
+  <!-- SUMMARY CARDS -->
+  <div class="summary">
+    <div class="summary-card blue">
+      <h4>Total Due</h4>
+      <h2>₹4,000</h2>
+      <p>3 pending bills</p>
+    </div>
+
+    <div class="summary-card yellow">
+      <h4>Active Complaints</h4>
+      <h2>2</h2>
+      <p>0 in progress</p>
+    </div>
+
+    <div class="summary-card green">
+      <h4>Bills Paid</h4>
+      <h2>1</h2>
+      <p>₹850 total</p>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <div class="services">
+    <div onclick="openService('electricity')" class="service"><span class="e">⚡</span> Electricity</div>
+    <div onclick="openService('water')" class="service"><span class="w">💧</span> Water Supply</div>
+    <div onclick="openService('gas')" class="service"><span class="g">🔥</span> Gas Connection</div>
+    <div onclick="openService('garbage')" class="service"><span class="s">🗑</span> Garbage & Sanitation</div>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="active">Bills</button>
+    <button id="complaintsTab">Complaints</button>
+  </div>
+
+  <!-- BILL CARDS -->
+  <div class="bills">
+
+    <div class="bill orange">
+      <div class="bill-top">
+        <div>
+          <small>Bill No.</small>
+          <h3>ELEC-2024-001234</h3>
+        </div>
+        <span class="status pending">Pending</span>
+      </div>
+
+      <div class="bill-mid">
+        <div>📅 Jan 2024</div>
+        <div>⏰ Due: 2024-02-15</div>
+      </div>
+
+      <div class="amount">
+        <span>₹ Amount Due</span>
+        <strong>₹2,450</strong>
+      </div>
+
+      <div class="actions">
+        <button class="pay">Pay Now</button>
+        <button class="view">View Bill</button>
+      </div>
+    </div>
+
+    <div class="bill blue">
+      <div class="bill-top">
+        <div>
+          <small>Bill No.</small>
+          <h3>WTR-2024-005678</h3>
+        </div>
+        <span class="status paid">Paid</span>
+      </div>
+
+      <div class="bill-mid">
+        <div>📅 Jan 2024</div>
+        <div>⏰ Paid</div>
+      </div>
+
+      <div class="amount">
+        <span>₹ Amount</span>
+        <strong>₹850</strong>
+      </div>
+
+      <div class="actions">
+        <button class="view full">Download Receipt</button>
+      </div>
+    </div>
+
+    <div class="bill orange">
+      <div class="bill-top">
+        <div>
+          <small>Bill No.</small>
+          <h3>GAS-2024-003456</h3>
+        </div>
+        <span class="status pending">Pending</span>
+      </div>
+
+      <div class="bill-mid">
+        <div>📅 Jan 2024</div>
+        <div>⏰ Due: 2024-02-20</div>
+      </div>
+
+      <div class="amount">
+        <span>₹ Amount Due</span>
+        <strong>₹1,200</strong>
+      </div>
+
+      <div class="actions">
+        <button class="pay">Pay Now</button>
+        <button class="view">View Bill</button>
+      </div>
+    </div>
+
+    <div class="bill green">
+      <div class="bill-top">
+        <div>
+          <small>Bill No.</small>
+          <h3>SAN-2024-007890</h3>
+        </div>
+        <span class="status overdue">Overdue</span>
+      </div>
+
+      <div class="bill-mid">
+        <div>📅 Dec 2023</div>
+        <div>⏰ Due: 2024-01-25</div>
+      </div>
+
+      <div class="amount">
+        <span>₹ Amount Due</span>
+        <strong>₹350</strong>
+      </div>
+
+      <div class="actions">
+        <button class="pay">Pay Now</button>
+        <button class="view">View Bill</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2024 SUVIDHA – A Government of India Initiative
+</footer>
+
+<script src="script.js"></script>
+<!-- PAYMENT MODAL -->
+<div id="paymentOverlay" class="overlay hidden">
+  <div class="payment-modal">
+
+    <div class="payment-header">
+      <div>
+        <h3>Payment</h3>
+        <h1>₹ <span id="payAmount">2,450</span></h1>
+        <p>Bill: <b id="billNo">ELEC-2024-001234</b> • electricity</p>
+      </div>
+      <button class="close-btn" onclick="closePayment()">✕</button>
+    </div>
+
+    <div class="payment-body">
+      <p class="select">Select Payment Method</p>
+
+      <div class="pay-option">
+        📱
+        <div>
+          <b>UPI Payment</b>
+          <small>Google Pay, PhonePe, Paytm</small>
+        </div>
+      </div>
+
+      <div class="pay-option">
+        💳
+        <div>
+          <b>Card Payment</b>
+          <small>Debit / Credit Cards</small>
+        </div>
+      </div>
+
+      <div class="pay-option">
+        🏦
+        <div>
+          <b>Net Banking</b>
+          <small>All major banks</small>
+        </div>
+      </div>
+
+      <div class="pay-option">
+        🔳
+        <div>
+          <b>Scan QR Code</b>
+          <small>Scan & Pay</small>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

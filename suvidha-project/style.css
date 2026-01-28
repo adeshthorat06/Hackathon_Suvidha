@@ -1,0 +1,96 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:#f4f6f8;color:#1f2937}
+
+/* Top */
+.top-bar{
+  background:#1e3a8a;color:#fff;
+  display:flex;justify-content:space-between;
+  padding:8px 60px;font-size:14px
+}
+
+/* Navbar */
+.navbar{
+  background:linear-gradient(90deg,#1e40af,#2563eb);
+  padding:20px 60px;color:#fff;
+  display:flex;justify-content:space-between;align-items:center
+}
+.logo{display:flex;gap:15px;align-items:center}
+.logo-circle{
+  background:#fff;color:#2563eb;
+  width:45px;height:45px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:bold
+}
+.login-btn{
+  background:transparent;border:none;
+  color:#fff;font-size:16px;cursor:pointer
+}
+
+/* Hero */
+.hero{
+  background:linear-gradient(135deg,#1e3a8a,#2563eb);
+  text-align:center;color:#fff;
+  padding:90px 20px
+}
+.hero h1{font-size:48px;margin:15px 0}
+.hero span{color:#bbf7d0}
+.hero-buttons{margin-top:30px}
+.btn{padding:14px 28px;border-radius:10px;font-size:16px;border:none}
+.green{background:#22c55e;color:#fff}
+.outline{background:transparent;border:2px solid #fff;color:#fff;margin-left:15px}
+
+/* Stats */
+.stats{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  background:#fff;padding:40px;text-align:center
+}
+
+/* Services */
+.services{text-align:center;padding:70px 40px}
+.cards{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:25px;margin-top:40px
+}
+.card{
+  border-radius:14px;padding:30px;
+  color:#fff;min-height:200px;
+  display:flex;flex-direction:column;justify-content:space-between
+}
+.card a{color:#fff;text-decoration:none;font-weight:bold}
+.yellow{background:linear-gradient(#facc15,#f59e0b)}
+.blue{background:linear-gradient(#38bdf8,#0284c7)}
+.orange{background:linear-gradient(#fb923c,#ea580c)}
+.green{background:linear-gradient(#34d399,#059669)}
+
+/* Why */
+.why{
+  background:#eef2f7;
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:20px;padding:60px
+}
+.why-card{
+  background:#fff;border-radius:14px;
+  padding:25px;text-align:center
+}
+
+/* CTA */
+.cta{
+  background:#22c55e;color:#fff;
+  text-align:center;padding:80px 20px
+}
+.cta button{
+  margin-top:25px;padding:14px 30px;
+  border:none;border-radius:12px;
+  background:#fff;color:#16a34a;font-size:16px
+}
+
+/* Footer */
+footer{
+  background:#0f172a;color:#cbd5f5;
+  padding:50px 60px
+}
+.footer-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:40px
+}
+.copy{text-align:center;margin-top:40px;font-size:14px}

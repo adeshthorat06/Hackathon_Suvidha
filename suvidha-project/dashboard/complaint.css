@@ -1,0 +1,73 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{background:#f4f6f9;color:#1f2937}
+
+/* Header */
+.header{
+  background:linear-gradient(90deg,#1e40af,#2563eb);
+  padding:18px 60px;color:#fff;
+  display:flex;justify-content:space-between;align-items:center
+}
+.logo{display:flex;gap:12px;align-items:center}
+.circle{
+  width:42px;height:42px;border-radius:50%;
+  background:#fff;color:#2563eb;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:bold
+}
+.right span{margin-left:20px}
+
+/* Activity */
+.activity{padding:40px 60px}
+.activity-head{
+  display:flex;justify-content:space-between;align-items:center
+}
+.new-btn{
+  padding:10px 18px;border-radius:10px;
+  border:2px solid #2563eb;
+  background:#fff;color:#2563eb
+}
+
+/* Grid */
+.complaint-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:25px;margin-top:25px
+}
+
+/* Complaint Card */
+.complaint{
+  background:#fff;border-radius:16px;
+  padding:20px;
+  box-shadow:0 8px 25px rgba(0,0,0,.08)
+}
+.orange{border-top:6px solid #f59e0b}
+.blue{border-top:6px solid #3b82f6}
+.green{border-top:6px solid #10b981}
+
+.top{
+  display:flex;justify-content:space-between;align-items:center
+}
+.ref{color:#6b7280;font-size:14px;margin:6px 0 12px}
+
+/* Badges */
+.badge{
+  padding:4px 12px;border-radius:20px;
+  font-size:12px
+}
+.pending{background:#fde68a}
+.resolved{background:#bbf7d0}
+
+/* Timeline */
+.timeline{margin-top:10px}
+.step{
+  display:flex;gap:12px;
+  margin:14px 0;align-items:flex-start
+}
+.step span{
+  width:26px;height:26px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:#e5e7eb
+}
+.step.done span{background:#22c55e;color:#fff}
+.step.pending span{background:#cbd5e1}
+.step small{display:block;color:#6b7280;font-size:12px}

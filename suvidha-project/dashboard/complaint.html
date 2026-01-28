@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Complaint Activity | SUVIDHA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="complaint.css">
+</head>
+<body>
+
+<!-- HEADER (reuse same dashboard header if needed) -->
+<div class="header">
+  <div class="logo">
+    <div class="circle">S</div>
+    <div>
+      <h2>SUVIDHA</h2>
+      <p>Smart Urban Digital Helpdesk</p>
+    </div>
+  </div>
+
+  <div class="right">
+    <span>🏠 Home</span>
+    <span>👤 hshsb3137</span>
+  </div>
+</div>
+
+<!-- RECENT ACTIVITY -->
+<section class="activity">
+  <div class="activity-head">
+    <h2>Recent Activity</h2>
+    <button class="new-btn">+ New Complaint</button>
+  </div>
+
+  <div class="complaint-grid">
+
+    <!-- COMPLAINT CARD -->
+    <div class="complaint orange">
+      <div class="top">
+        <h3>Power Outage</h3>
+        <span class="badge pending">Pending</span>
+      </div>
+      <p class="ref">Ref: CMP-2024-001</p>
+
+      <div class="timeline">
+        <div class="step done">
+          <span>✔</span>
+          <div>
+            <b>Complaint Registered</b>
+            <small>2024-01-28 10:30</small>
+          </div>
+        </div>
+
+        <div class="step done">
+          <span>✔</span>
+          <div>
+            <b>Assigned to Team</b>
+            <small>2024-01-29 14:00</small>
+          </div>
+        </div>
+
+        <div class="step pending">
+          <span>⏳</span>
+          <div><b>Work in Progress</b></div>
+        </div>
+
+        <div class="step pending">
+          <span>⏳</span>
+          <div><b>Issue Resolved</b></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMPLAINT CARD -->
+    <div class="complaint blue">
+      <div class="top">
+        <h3>Leakage</h3>
+        <span class="badge resolved">Resolved</span>
+      </div>
+      <p class="ref">Ref: CMP-2024-002</p>
+
+      <div class="timeline">
+        <div class="step done"><span>✔</span><b>Complaint Registered</b></div>
+        <div class="step done"><span>✔</span><b>Assigned to Team</b></div>
+        <div class="step done"><span>✔</span><b>Work in Progress</b></div>
+        <div class="step done"><span>✔</span><b>Issue Resolved</b></div>
+      </div>
+    </div>
+
+    <!-- COMPLAINT CARD -->
+    <div class="complaint green">
+      <div class="top">
+        <h3>Garbage Collection</h3>
+        <span class="badge pending">Pending</span>
+      </div>
+      <p class="ref">Ref: CMP-2024-003</p>
+
+      <div class="timeline">
+        <div class="step done"><span>✔</span><b>Complaint Registered</b></div>
+        <div class="step pending"><span>⏳</span><b>Assigned to Team</b></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script src="complaint.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+@import url('../electricity/style.css');
+
+/* Override banner */
+.banner{
+  background:linear-gradient(90deg,#fb923c,#f97316);
+}
+
+/* Card accent */
+.bill-card{border-top:5px solid #fb923c}

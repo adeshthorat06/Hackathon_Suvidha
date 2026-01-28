@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Water Supply | SUVIDHA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <span>Government of India | भारत सरकार</span>
+  <span>हिंदी</span>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="logo">
+    <div class="circle">S</div>
+    <div>
+      <h2>SUVIDHA</h2>
+      <p>Smart Urban Digital Helpdesk</p>
+    </div>
+  </div>
+  <div class="nav">
+    <a style="text-decoration: none; color: aliceblue;" href="../dashboard/index.html">🏠 Home</a>
+    <span>👤 hshsb3137</span>
+  </div>
+</header>
+
+<!-- WATER BANNER -->
+<section class="banner">
+  <a class="back" href="../dashboard/index.html">← Back</a>
+  <div class="banner-content">
+    <div class="icon">💧</div>
+    <div>
+      <h1>Water Supply</h1>
+      <p>Pay water bills and report supply problems</p>
+    </div>
+  </div>
+</section>
+
+<!-- TABS -->
+<div class="tabs">
+  <button class="tab active" onclick="showTab('bills')">📄 Bills & Payments</button>
+  <button class="tab" onclick="showTab('complaint')">⚠ File Complaint</button>
+  <button class="tab" onclick="showTab('track')">🔍 Track Status</button>
+</div>
+
+<!-- CONTENT -->
+<section class="content">
+
+  <!-- BILLS -->
+  <div id="bills" class="tab-content active">
+    <div class="bill-card">
+      <div class="bill-top">
+        <div>
+          <small>Bill No.</small>
+          <h3>WTR-2024-005678</h3>
+        </div>
+        <span class="badge paid">Paid</span>
+      </div>
+
+      <div class="bill-info">
+        <div>📅 Period<br><b>Jan 2024</b></div>
+        <div>⏰ Due Date<br><b>2024-02-10</b></div>
+      </div>
+
+      <div class="amount">
+        <span>₹ Amount Due</span>
+        <strong>₹850</strong>
+      </div>
+
+      <div class="actions">
+        <button class="download">📄 Download Receipt</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FILE COMPLAINT -->
+  <div id="complaint" class="tab-content">
+    <div class="form-card">
+      <h3>Register Complaint</h3>
+
+      <label>Complaint Type</label>
+      <select>
+        <option>Select complaint type</option>
+        <option>Water Leakage</option>
+        <option>No Water Supply</option>
+        <option>Low Pressure</option>
+      </select>
+
+      <label>Description</label>
+      <textarea placeholder="Describe your issue in detail..."></textarea>
+
+      <label>Location</label>
+      <input type="text" placeholder="Enter your address or area">
+
+      <label>Mobile Number</label>
+      <input type="text" placeholder="Enter 10-digit mobile number">
+
+      <label>Attach Photo (Optional)</label>
+      <div class="upload">📷 Tap to capture or upload photo</div>
+
+      <button class="submit">Submit</button>
+    </div>
+  </div>
+
+  <!-- TRACK STATUS -->
+  <div id="track" class="tab-content">
+    <div class="status-card">
+      <div class="status-top">
+        <h3>Leakage</h3>
+        <span class="badge resolved">Resolved</span>
+      </div>
+
+      <p class="ref">Ref: CMP-2024-002</p>
+
+      <div class="timeline">
+        <div class="step done">✔ Complaint Registered <small>2024-01-25 09:15</small></div>
+        <div class="step done">✔ Assigned to Team</div>
+        <div class="step done">✔ Work in Progress</div>
+        <div class="step done">✔ Issue Resolved</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  © 2024 SUVIDHA – A Government of India Initiative
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

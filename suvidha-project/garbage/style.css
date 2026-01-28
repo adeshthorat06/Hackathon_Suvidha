@@ -1,0 +1,5 @@
+@import url('../electricity/style.css');
+
+.banner{
+  background:linear-gradient(90deg,#34d399,#16a34a);
+}

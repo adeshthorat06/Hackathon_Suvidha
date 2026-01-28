@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Garbage & Sanitation | SUVIDHA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <span>Government of India | भारत सरकार</span>
+  <span>हिंदी</span>
+</div>
+
+<header class="header">
+  <div class="logo">
+    <div class="circle">S</div>
+    <div>
+      <h2>SUVIDHA</h2>
+      <p>Smart Urban Digital Helpdesk</p>
+    </div>
+  </div>
+  <div class="nav">
+     <a style="text-decoration: none; color: aliceblue;" href="../dashboard/index.html">🏠 Home</a>
+    <span>👤 hshsb3137</span>
+  </div>
+</header>
+
+<section class="banner">
+  <a class="back" href="../dashboard/index.html">← Back</a>
+  <div class="banner-content">
+    <div class="icon">🗑</div>
+    <div>
+      <h1>Garbage & Sanitation</h1>
+      <p>Register garbage & sanitation complaints</p>
+    </div>
+  </div>
+</section>
+
+<div class="tabs">
+  <button class="tab active" onclick="showTab('complaint')">⚠ File Complaint</button>
+  <button class="tab" onclick="showTab('track')">🔍 Track Status</button>
+</div>
+
+<section class="content">
+
+  <!-- Complaint -->
+  <div id="complaint" class="tab-content active">
+    <div class="form-card">
+      <h3>Register Complaint</h3>
+
+      <label>Complaint Type</label>
+      <select>
+        <option>Garbage Not Collected</option>
+        <option>Overflowing Dustbin</option>
+        <option>Street Cleaning</option>
+      </select>
+
+      <label>Description</label>
+      <textarea placeholder="Describe the issue..."></textarea>
+
+      <label>Location</label>
+      <input type="text" placeholder="Enter location">
+
+      <label>Mobile Number</label>
+      <input type="text" placeholder="Enter mobile number">
+
+      <div class="upload">📷 Upload Photo</div>
+      <button class="submit">Submit</button>
+    </div>
+  </div>
+
+  <!-- Track -->
+  <div id="track" class="tab-content">
+    <div class="status-card">
+      <h3>Garbage Collection</h3>
+      <span class="badge pending">Pending</span>
+
+      <div class="timeline">
+        <div class="step done">✔ Complaint Registered</div>
+        <div class="step active">⏳ Assigned to Team</div>
+        <div class="step">○ Work in Progress</div>
+        <div class="step">○ Issue Resolved</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<footer>© 2024 SUVIDHA – Government of India Initiative</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
