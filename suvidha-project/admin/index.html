@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SUVIDHA Admin Dashboard</title>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<header class="topbar">
+  <div class="left">
+    <div class="logo">S</div>
+    <div>
+      <h3>SUVIDHA</h3>
+      <span>Smart Urban Digital Helpdesk</span>
+    </div>
+  </div>
+
+  <div class="right">
+    <a href="../index.html">🏠 Home</a>
+  </div>
+</header>
+
+<!-- TITLE BAR -->
+<section class="title-bar">
+  <div>
+    <h1>Admin Dashboard</h1>
+    <p>Municipal Corporation – Delhi</p>
+  </div>
+
+  <div class="filter">
+    <select>
+      <option>Last 7 days</option>
+      <option>Last 30 days</option>
+    </select>
+    <button disabled>Export</button>
+  </div>
+</section>
+
+<!-- MAIN -->
+<main class="container">
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat">
+      <p>Total Complaints</p>
+      <h2>1,247</h2>
+      <span class="green">+12% this week</span>
+    </div>
+
+    <div class="stat">
+      <p>Resolution Rate</p>
+      <h2>87%</h2>
+      <span class="green">1089 resolved</span>
+    </div>
+
+    <div class="stat">
+      <p>Avg. Resolution Time</p>
+      <h2>2.4 days</h2>
+      <span class="green">-8% improvement</span>
+    </div>
+
+    <div class="stat">
+      <p>Total Revenue</p>
+      <h2>₹4.6 Cr</h2>
+      <span class="green">94.5% success</span>
+    </div>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs">
+  <button class="tab active" data-tab="overview">Overview</button>
+  <button class="tab" data-tab="complaints">Complaints</button>
+  <button class="tab" data-tab="revenue">Revenue</button>
+  <button class="tab" data-tab="areas">Areas</button>
+</div>
+
+
+<!-- OVERVIEW -->
+<section id="overview" class="tab-content active">
+  <div class="grid">
+    <div class="card">
+      <h3>Complaints by Utility</h3>
+      <canvas id="donutChart"></canvas>
+    </div>
+
+    <div class="card">
+      <h3>Weekly Complaint Trend</h3>
+      <canvas id="lineChart"></canvas>
+    </div>
+  </div>
+
+  <div class="utility">
+    <div class="u electricity">⚡ Electricity <b>412</b></div>
+    <div class="u water">💧 Water Supply <b>389</b></div>
+    <div class="u gas">🔥 Gas Connection <b>156</b></div>
+    <div class="u garbage">🗑 Garbage & Sanitation <b>290</b></div>
+  </div>
+</section>
+<!-- COMPLAINTS -->
+<section id="complaints" class="tab-content">
+
+  <!-- Timeline Chart -->
+  <div class="card">
+    <h3>Complaint Resolution Timeline</h3>
+    <canvas id="complaintTimeline"></canvas>
+  </div>
+
+  <!-- Complaints Table -->
+  <div class="card">
+    <h3>Recent Complaints</h3>
+
+    <table class="complaint-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Type</th>
+          <th>Area</th>
+          <th>Status</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>CMP-1023</td>
+          <td>Water Supply</td>
+          <td>Dwarka</td>
+          <td class="open">Open</td>
+          <td>25 Jan 2024</td>
+        </tr>
+
+        <tr>
+          <td>CMP-1024</td>
+          <td>Electricity</td>
+          <td>Rohini</td>
+          <td class="resolved">Resolved</td>
+          <td>24 Jan 2024</td>
+        </tr>
+
+        <tr>
+          <td>CMP-1025</td>
+          <td>Garbage</td>
+          <td>Lajpat Nagar</td>
+          <td class="inprogress">In Progress</td>
+          <td>23 Jan 2024</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</section>
+
+
+<!-- REVENUE -->
+<section id="revenue" class="tab-content">
+  <div class="card">
+    <h3>Monthly Revenue Collection</h3>
+    <canvas id="barChart"></canvas>
+  </div>
+</section>
+<!-- AREAS -->
+<section id="areas" class="tab-content">
+  <div class="card">
+    <h3>Complaints Heatmap by Area</h3>
+    <canvas id="areaChart"></canvas>
+  </div>
+</section>
+
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <h4>SUVIDHA</h4>
+    <p>Smart Urban Digital Helpdesk</p>
+  </div>
+
+  <div>
+    <p>📞 1800-123-4567</p>
+    <p>📧 support@suvidha.gov.in</p>
+  </div>
+
+  <div>
+    <p>Terms & Conditions</p>
+    <p>Privacy Policy</p>
+    <p>Help & FAQ</p>
+  </div>
+
+  <div class="copy">
+    © 2024 SUVIDHA – Government of India Initiative
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
